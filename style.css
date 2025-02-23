@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-primaria: #bcac71;
+    --cor-secundaria: #79927d;
+    --cor-terciaria: #e9db9c;
+    --cor-quaternaria: #311a2f;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", serif;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    min-height: 100vh;
+}
+
+h1{
+    margin: 2rem;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "DM Serif Text", serif;
+    font-weight: 300;
+    color: var(--cor-quaternaria);
+}
+
+h2{
+    color: var(--cor-quaternaria);
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.btn-game {
+    background-color: transparent;
+    border-radius: 2px;
+    width: 8rem;    
+    height: 8rem;    
+    font-size: 6rem;
+    font-weight: 300; 
+    display: flex;   
+    justify-content: center; 
+    align-items: center; 
+    border: 0;
+    cursor: pointer;
+}
+
+input{
+    background-color: var(--cor-terciaria);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.div-player{
+    margin: 1rem;
+}
+
+label{
+    color: var(--cor-quaternaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#start, #reset{
+    background-color: var(--cor-primaria);
+    color: var(--cor-quaternaria);
+    margin: 1rem;
+    height: 1.5rem;
+    width: 8rem;
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+row{
+    display: block;
+}
+
+#game {
+    display: grid;  /* Define o layout de grid para o tabuleiro */
+    grid-template-columns: repeat(3, 8rem);  /* 3 colunas de 8rem de largura */
+    grid-template-rows: repeat(3, 8rem);  /* 3 linhas de 8rem de altura */
+    justify-content: center;  /* Centraliza o tabuleiro */
+    margin: 3rem;
+}
+
+footer{
+    background-color: white;
+    color: var(--cor-quaternaria);
+    text-align: center;
+    font-family: serif;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.um, .dois, .quatro, .cinco{
+    border-right: 4px solid #000;
+    border-bottom: 4px solid #000
+}
+
+.tres, .seis{
+    border-right: 4px solid #000;
+
+}
+
+.sete, .oito{
+    border-bottom: 4px solid #000
+}
+
+
+@media (max-width: 500px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .btn-game{
+        width: 5rem;
+        height: 5rem;
+        font-size: 4rem;
+    }
+    #game {
+        grid-template-columns: repeat(3, 5rem); 
+        grid-template-rows: repeat(3, 5rem); 
+        margin: 3rem;
+    }
+}
+
+@media (max-width: 330px){
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    
+    label{
+        font-size: 1rem;
+    }
+    input{
+        width: 8rem;
+    }
+
+    .btn-game{
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 4rem;
+    }
+    #game {
+        grid-template-columns: repeat(3, 4.5rem); 
+        grid-template-rows: repeat(3, 4.5rem); 
+        margin: 3rem;
+    }
+    
+    #start, #reset{
+        background-color: var(--cor-primaria);
+        color: var(--cor-quaternaria);
+        font-size: .7rem;
+        margin: 1rem;
+        height: 1.5rem;
+        width: 5.5rem;
+        border-radius: 16px;
+        font-weight: 500;
+    }
+}

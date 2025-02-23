@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Jogo da velha</title>
+</head>
+<body>   
+    <main>
+        <h1>Tic-tac-toe Game</h1>
+        <section class="players">
+            <div class="div-player">
+                <label for="player1">Player 1: </label>
+                <input type="text" id="player1">
+            </div>
+            <div class="div-player">
+                <label for="player2" >Player 2: </label>
+                <input type="text" id="player2">
+            </div>
+            <button id="start" type="button">Start Game</button>
+            <button id="reset" type="button">Reset Game</button>
+        </section>
+        <h2></h2>
+        <section id="game">
+            <div class="row">
+                <button class="btn-game um row1 col1 dig1" type="button"></button>
+                <button class="btn-game dois row1 col2" type="button"></button>
+                <button class="btn-game tres row1 col3 dig2" type="button"></button>
+            </div>
+            <div class="row">
+                <button class="btn-game quatro row2 col1" type="button"></button>
+                <button class="btn-game cinco row2 col2 dig1 dig2" type="button"></button>
+                <button class="btn-game seis row2 col3" type="button"></button>
+            </div>
+            <div class="row">
+                <button class="btn-game sete row3 col1 dig2" type="button"></button>
+                <button class="btn-game  oito row3 col2" type="button"></button>
+                <button class="btn-game  nove row3 col3 dig1" type="button"></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2025 &copy; Made by Arthur<p>
+    </footer>
+</body>
+</html>
